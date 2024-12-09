@@ -18,15 +18,12 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
           user: Wxo
           template: classic
-          # Configura otras opciones si es necesario
 
-      # Paso para mover el archivo SVG generado a una carpeta específica del repositorio
       - name: Move SVG to repository folder
         run: |
           mkdir -p .github/metrics
           mv ./path/to/generated/metrics.svg .github/metrics/metrics.svg
 
-      # Confirmar y subir el archivo SVG a GitHub
       - name: Commit and push SVG
         uses: EndBug/add-and-commit@v7
         with:
